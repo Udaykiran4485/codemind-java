@@ -4,31 +4,30 @@ class Sample
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
-        ArrayList<Integer> al=new ArrayList<Integer>();
-        int a,n[];
-        a=sc.nextInt();
-        n=new int[a];
-        for(int i=0;i<a;i++)
-          {
-              n[i]=sc.nextInt();
-          }
-        for(int i=0;i<a;i++)
-        {
-            if(n[i]%2!=0)
-            {
-                al.add(n[i]);
-            }
+        int n,x[],even[],odd[],i,j=0,k=0;
+        n=sc.nextInt();
+        x=new int[n];
+        for(i=0;i<n;i++)
+         {
+           x[i]=sc.nextInt();
         }
-        for(int i=0;i<a;i++)
+        even=new int[n];
+        odd=new int[n];
+        for(i=0;i<n;i++)
         {
-            if(n[i]%2==0)
-            {
-                al.add(n[i]);
-            }
+            if(x[i]%2!=0)
+             odd[k++]=x[i];
+            else
+             even[j++]=x[i];
         }
-        for(int i:al)
+        for(i=0;i<k;i++)
         {
-            System.out.print(i+" ");
+            System.out.print(odd[i]+" ");
         }
+        for(i=0;i<j;i++)
+        {
+            System.out.print(even[i]+" ");
+        }
+        sc.close();
     }
 }
